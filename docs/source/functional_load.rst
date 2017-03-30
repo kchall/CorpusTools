@@ -283,8 +283,8 @@ change in entropy using word types (rather than tokens). This is shown below, wh
 
 # ADD PICTURE
 
-# ADD SURENDRAN REF
-Thus, using either type-based change-in-entropy or raw minimal pair counts, or minimal pair counts relative to the length of the whole corpus, will all provide equivalent measurements of functional load. Token-based change-in-entropy should be used to either emulate Surendran and Niyogi, or to specifically take into account the actual frequency with which words are used. Minimal pair count relative to the number of words containing the relevant segments should be used to get a sense of the degree to which a contrast meets its "potential" for contrast, but should be used with caution, understanding that it does conflate functional load and predictability of distribution.
+# ADD WEDEL and SURENDRAN REFS
+Thus, using either type-based change-in-entropy or raw minimal pair counts, or minimal pair counts relative to the length of the whole corpus, will all provide equivalent measurements of functional load. In particular, note that this means that type-based change-in-entropy will be analogous to the minimal pair counts advocated by Wedel et al. Token-based change-in-entropy should be used to either emulate Surendran and Niyogi, or to specifically take into account the actual frequency with which words are used. Minimal pair count relative to the number of words containing the relevant segments should be used to get a sense of the degree to which a contrast meets its "potential" for contrast, but should be used with caution, understanding that it does conflate functional load and predictability of distribution.
 
 EXPLAIN THE SITUATION IN WHICH THE MEASURES ARE IN FACT THE SAME
 
