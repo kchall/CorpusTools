@@ -230,7 +230,13 @@ relies on dividing the number of PAIRS by the total number of relevant WORDS;
 it is intended just to provide some relative measure, rather than to be straightforwardly
 interpretable as, say, a percentage. 
 
-The difference between the two relativizations...ADD STUFF
+The difference between the two relativizations is that relativizing to the corpus allows
+for direct comparison between functional loads of different pairs in the same corpus as
+well as the comparison of functional loads across corpora. Within a single
+corpus, raw minimal pair counts can be directly compared, but a raw minimal pair count of 
+5 would be indicative of a highly contrastive pair if there are only 15 words in the corpus,
+while being indicative of a low-contrast pair in a corpus of 15000 words. 
+...ADD STUFF
 
 The resulting calculations of functional load are thus quite similar
 between the two algorithms (change in entropy vs. minimal pair count),
