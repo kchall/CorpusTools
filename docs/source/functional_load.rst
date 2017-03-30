@@ -205,6 +205,8 @@ And analogously, for the normalized functional load of [t] / [d] based on word t
 
 :math:`\Delta H = 0.458 / 4.087 = 0.1121`
 
+Note that the typical way of calculating Delta-H functional load is to use word tokens, not word types.
+
 .. _method_change_minimal_pairs:
 
 (Relative) Minimal Pair Counts
@@ -235,18 +237,54 @@ for direct comparison between functional loads of different pairs in the same co
 well as the comparison of functional loads across corpora. Within a single
 corpus, raw minimal pair counts can be directly compared, but a raw minimal pair count of 
 5 would be indicative of a highly contrastive pair if there are only 15 words in the corpus,
-while being indicative of a low-contrast pair in a corpus of 15000 words. 
-...ADD STUFF
+while being indicative of a low-contrast pair in a corpus of 15000 words. Thus, relativizing
+to the corpus size is useful for cross-corpus comparisons.
+
+On the other hand, relativizing to the number of words containing the segments in question
+is more informative about their own "relative" contrastiveness in comparison to their "potential"
+for contrast. In particular, imagine that we have a toy corpus with 100 words. There are 
+5 minimal pairs based on [m]/[n], and 5 minimal pairs based on [b]/[d]. These would be 
+identical functional loads as far as either of the first two measures are concerned 
+(i.e., raw counts, where the FLs would be 5 and 5, or counts relativized to corpus size,
+where the FLs would be 5 / 100 = 0.05 and 0.05).
+
+But, if there are 18 words in the corpus that contain either [m] or [n] (or both), and 80 words 
+in the corpus that contain either [b] or [d] (or both), then the minimal pair 
+counts relativized to the number of words with the relevant segments will differ widely. 
+Now, the functional load of [m]/[n] would be 5 / 18 (=0.278), while that of [b]/[d] would be 5 / 80 (=0.0625), 
+much lower. In other words, the [b]/[d] contrast is making much less use of its potential
+for contrast than the [m]/[n] contrat.
+
+[ADD REF TO MARTIN & PEPERKAMP]
+
+A benefit of this approach is that it does take into account the relative frequency of the sounds in any given pair. That is, for sounds that are less frequent overall, we would _expect_ there to be fewer minimal pairs, and by relativizing to only the number of words containing at least one of the two sounds in the pair, we capture that expectation: Intuitively, it makes sense that if [m] and [n] in the above example are so much less frequent than [b] and [d], then having five minimal pairs hinging on [m] and [n] is more surprising than having five minimal pairs hinging on [b] and [d], so we want to say that the [m] / [n] contrast does more work in distinguishing lexical items than does [b]/[d].
+
+# ADD CROSS-REF IN PARAGRAPH BELOW
+The problem with this approach is that it conflates "work done by distinguishing lexical items" with "predictability of distribution," which can be calculated separately in PCT. That is, minimal pairs provide examples of environments that are unpredictable. So for the [m]/[n] case, what is happening is that the sounds are often in unpredictable contexts (i.e., minimal pairs) relative to their total distribution, while [b] and [d] are generally not in completely unpredictable contexts, though that happens occasionally (relative to their distribution). 
+
+# ADD IPHOD REF BELOW
+Thus, this way of measuring "functional load" (i.e., minimal pair counts relative to the number of words in the corpus containing the relevant segments) in fact conflates a measure of lexical distinction (the classic definition of functional load) and a measure of predictability of distribution. This can be seen in the following graph showing the correlation of ProD to relativized minimal pair counts for pairs of obstruents in the IPHOD corpus (with a correlation coefficient of r = 0.75):
+
+# ADD PICTURE
 
 The resulting calculations of functional load are thus quite similar
 between the two algorithms (change in entropy vs. minimal pair count),
-but the units are entirely different.
+though the units are entirely different.
 Functional load based on change in entropy is measured in *bits*,
 while functional load based on relativized minimal pair counts is
 simply a percentage. Also note that functional load based on minimal
 pairs is only based on type frequency; the frequency of the usage of
 the words is not used as a weighting factor, the way it can be under
 the calculation of functional load as change in entropy.
+
+Furthermore, if raw minimal pair count is used, or minimal pairs relativized to the size of the corpus,
+these will be perfectly analogous to the (non-standard) calculation of functional load based on 
+change in entropy using word types (rather than tokens). This is shown below, where the same pairs of obstruents in the IPHOD corpus are shown with their type-based Delta-H entropy on the y-axis and their raw minimal pair counts on the x-axis (r = 0.999):
+
+# ADD PICTURE
+
+# ADD SURENDRAN REF
+Thus, using either type-based change-in-entropy or raw minimal pair counts, or minimal pair counts relative to the length of the whole corpus, will all provide equivalent measurements of functional load. Token-based change-in-entropy should be used to either emulate Surendran and Niyogi, or to specifically take into account the actual frequency with which words are used. Minimal pair count relative to the number of words containing the relevant segments should be used to get a sense of the degree to which a contrast meets its "potential" for contrast, but should be used with caution, understanding that it does conflate functional load and predictability of distribution.
 
 EXPLAIN THE SITUATION IN WHICH THE MEASURES ARE IN FACT THE SAME
 
