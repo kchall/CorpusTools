@@ -211,29 +211,38 @@ And analogously, for the normalized functional load of [t] / [d] based on word t
 ``````````````````````````````
 
 The second means of calculating functional load that is included in PCT
-is a straight count of minimal pairs, which can be relativized to the
+is a straight count of minimal pairs, which can be relativized either to the total number of words in the corpus, or to the
 number of words in the corpus that are potential minimal pairs—i.e. the
 number of words in the corpus with at least one of the target segments.
 
 In the above example, the number of minimal pairs that hinge on [h] vs.
 [ŋ] is of course 0, so the functional load of [h] / [ŋ] is 0. The number
-of minimal pairs that hinge on [t] / [d] is 3, and the number of words
-with either [t] or [d] is 11; the functional load as a relativized minimal
-pair count would therefore be 3/11 = 0.273. Note that here, a relatively
-loose definition of minimal pair is used; specifically, two words are
+of minimal pairs that hinge on [t] / [d] is 3, the total number of words in the corpus is 17, 
+and the number of words with either [t] or [d] is 11. Thus, the raw minimal pair count 
+would be 3; the minimal pair count relativized to the corpus length would be 3 / 17 = 0.176; 
+and the minimal pair count relativized to the number of words containing [t] or [d] is 3 / 11 = 0.273. 
+Note that here, a relatively loose definition of minimal pair is used; specifically, two words are
 considered to be a minimal pair hinging on sounds A and B if, upon merger
 of A and B into a single symbol X, the words are identical. Thus, *toot* and
 *dude* are considered a minimal pair on this definition, because they both
-become [XuX] upon merger of [t] and [d].
+become [XuX] upon merger of [t] and [d]. Also note that either version of the relativization
+relies on dividing the number of PAIRS by the total number of relevant WORDS;
+it is intended just to provide some relative measure, rather than to be straightforwardly
+interpretable as, say, a percentage. 
+
+The difference between the two relativizations...ADD STUFF
 
 The resulting calculations of functional load are thus quite similar
-between the two measures, but the units are entirely different.
+between the two algorithms (change in entropy vs. minimal pair count),
+but the units are entirely different.
 Functional load based on change in entropy is measured in *bits*,
 while functional load based on relativized minimal pair counts is
 simply a percentage. Also note that functional load based on minimal
 pairs is only based on type frequency; the frequency of the usage of
 the words is not used as a weighting factor, the way it can be under
 the calculation of functional load as change in entropy.
+
+EXPLAIN THE SITUATION IN WHICH THE MEASURES ARE IN FACT THE SAME
 
 Average Functional Load
 ````````````````````````
