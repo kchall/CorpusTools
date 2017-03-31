@@ -205,7 +205,7 @@ And analogously, for the normalized functional load of [t] / [d] based on word t
 
 :math:`\Delta H = 0.458 / 4.087 = 0.1121`
 
-Note that the typical way of calculating Delta-H functional load is to use word tokens, not word types.
+Note that the typical way of calculating Delta-H functional load is to use word tokens, not word types, though see discussion below for a comparison of word-type-based Delta-H to minimal pair counts.
 
 .. _method_change_minimal_pairs:
 
