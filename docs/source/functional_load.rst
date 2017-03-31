@@ -287,7 +287,7 @@ these will be perfectly analogous to the (non-standard) calculation of functiona
 change in entropy using word types (rather than tokens). This is shown below, where the same pairs of obstruents in the [IPHOD]_ corpus are shown with their type-based Delta-H entropy on the y-axis and their raw minimal pair counts on the x-axis (r = 0.999):
 
 
-.. image:: static/delta-h_vs_raw_min_pairs.png
+.. image:: static/delta-H_vs_raw_min_pairs.png
    :width: 90%
    :align: center
 
