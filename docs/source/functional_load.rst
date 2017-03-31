@@ -283,7 +283,7 @@ the words is not used as a weighting factor, the way it can be under
 the calculation of functional load as change in entropy.
 
 Furthermore, if raw minimal pair count is used, or minimal pairs relativized to the size of the corpus,
-these will be perfectly analogous to the (non-standard) calculation of functional load based on 
+these will be analogous to the (non-standard) calculation of functional load based on 
 change in entropy using word types (rather than tokens). This is shown below, where the same pairs of obstruents in the [IPHOD]_ corpus are shown with their type-based Delta-H entropy on the y-axis and their raw minimal pair counts on the x-axis (r = 0.999):
 
 
@@ -338,10 +338,10 @@ Once a corpus is loaded, use the following steps.
 
    a. **Raw vs. relative count**: First, PCT can report only the raw count of
       minimal pairs that hinge on the contrast in the corpus, if you just
-      want to know the scope of the contrast. On the other hand, the
-      default is to relativize the raw count to the corpus size, by
-      dividing the raw number by the number of lexical entries that
-      include at least one instance of any of the target segments.
+      want to know the scope of the contrast ("Raw count"). On the other hand, the
+      default is to relativize the raw count to the whole corpus size ("Relativize to corpus"). You can also 
+      relativize the raw number by the number of lexical entries that
+      include at least one instance of any of the target segments ("Relativize to relevant words").
    b. **Distinguish homophones**: Second, PCT can either distinguish
       homophones or collapse them. For example, if the corpus includes
       separate entries for the words *sock* (n.), *sock* (v.), *shock* (n.),
@@ -378,7 +378,7 @@ Once a corpus is loaded, use the following steps.
 
 8.    **Type or token frequency**: As described in :ref:`method_change_entropy`, \Delta H entropy can be
       calculated using either type or token frequencies. This option
-      determines which to use. The default is to use token frequencies, as this is what [Surendran2003]_ do. Note that for minimal pairs, only type frequency is used.
+      determines which to use. The default is to use token frequencies, as this is what [Surendran2003]_ do. Note that for minimal pairs, only type frequency is used. [As mentioned above, using type frequency here will give you a measure analogous to raw minimal pair counts or minimal pair counts relativized to the whole corpus.]
 
 9. **Minimum frequency**: It is possible to set a minimum token frequency
    for words in the corpus in order to be included in the calculation.
