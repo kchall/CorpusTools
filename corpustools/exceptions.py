@@ -315,7 +315,7 @@ class ProdError(PCTError):
             if self.missing:
                 print(('The following words have at least one of the '
                             'segments you are searching for, but it occurs in '
-                            'an environment not included in the list you selected.'),file=f)
+                            'an environment not included in the list you selected.'), file=f)
                 print('Segments you selected: {}, {}'.format(self.segs[0], self.segs[1]),file=f)
                 print('Environments you selected: {}'.format(' ,'.join(str(env) for env in self.envs)),file=f)
                 print('Word\tRelevant environments (segmental level only)',file=f)
