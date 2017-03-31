@@ -261,11 +261,16 @@ The problem with this approach is that it conflates "work done by distinguishing
 
 Thus, this way of measuring "functional load" (i.e., minimal pair counts relative to the number of words in the corpus containing the relevant segments) in fact conflates a measure of lexical distinction (the classic definition of functional load) and a measure of predictability of distribution. This can be seen in the following graph showing the correlation of predictability of distribution to minimal pair counts relativized to the number of words containing the relevant segments, for (some) pairs of obstruents in the [IPHOD]_ corpus (with a correlation coefficient of r = 0.75):
 
-# ADD PICTURE
+.. image:: static/prod_vs_rel_min_pairs.png
+   :width: 90%
+   :align: center
 
 While functional load and predictability of distribution are correlated with each other regardless, the measure of functional load relative to the number of words containing the relevant segments is more highly correlated than the other measures of functional load. The two are generally correlated because pairs of sounds with a high functional load *must* provide many examples of the unpredictable environments, and so high functional load tends to be associated with a high entropy score (low degree of predictability of distribution). The converse, however, is not true. That is, pairs of sounds with a low functional load may have either a high or low predictability of distribution. They could have a low functional load because they are infrequent in the language, but do occur in minimal pairs (and therefore have a low degree of predictability of distribution / high entropy), or they could have a low functional load because they are frequent in the language but never occur in the same context, in which case, they would have a high degree of predictability of distribution (low entropy). Using either the absolute measure of functional load (raw number of minimal pairs) or one relativized only to the corpus size will minimize the correlation between functional load and predictability of distribution. This can be seen in the following graph, which again shows the correlation of predictability of distribution to functional load for pairs of obstruents in the [IPHOD]_ corpus, but using the count of minimal pairs relativized to the corpus size. Here, the correlation is only r = 0.61.
 
-# ADD PICTURE
+
+.. image:: static/prod_vs_raw_min_pairs.png
+   :width: 90%
+   :align: center
 
 The resulting calculations of functional load are thus quite similar
 between the two algorithms (change in entropy vs. minimal pair count),
@@ -279,19 +284,19 @@ the calculation of functional load as change in entropy.
 
 Furthermore, if raw minimal pair count is used, or minimal pairs relativized to the size of the corpus,
 these will be perfectly analogous to the (non-standard) calculation of functional load based on 
-change in entropy using word types (rather than tokens). This is shown below, where the same pairs of obstruents in the IPHOD corpus are shown with their type-based Delta-H entropy on the y-axis and their raw minimal pair counts on the x-axis (r = 0.999):
+change in entropy using word types (rather than tokens). This is shown below, where the same pairs of obstruents in the [IPHOD]_ corpus are shown with their type-based Delta-H entropy on the y-axis and their raw minimal pair counts on the x-axis (r = 0.999):
 
-# ADD PICTURE
 
-# ADD WEDEL and SURENDRAN REFS
-Thus, using either type-based change-in-entropy or raw minimal pair counts, or minimal pair counts relative to the length of the whole corpus, will all provide equivalent measurements of functional load. In particular, note that this means that type-based change-in-entropy will be analogous to the minimal pair counts advocated by Wedel et al. Token-based change-in-entropy should be used to either emulate [Surendran2003]_, or to specifically take into account the actual frequency with which words are used. Minimal pair count relative to the number of words containing the relevant segments should be used to get a sense of the degree to which a contrast meets its "potential" for contrast, but should be used with caution, understanding that it does conflate functional load and predictability of distribution.
+.. image:: static/delta-h_vs_raw_min_pairs.png
+   :width: 90%
+   :align: center
 
-EXPLAIN THE SITUATION IN WHICH THE MEASURES ARE IN FACT THE SAME
+Thus, using either type-based change-in-entropy or raw minimal pair counts, or minimal pair counts relative to the length of the whole corpus, will all provide equivalent measurements of functional load. In particular, note that this means that type-based change-in-entropy will be analogous to the minimal pair counts advocated by [Wedel2013]_. Token-based change-in-entropy should be used to either emulate [Surendran2003]_, or to specifically take into account the actual frequency with which words are used. Minimal pair count relative to the number of words containing the relevant segments should be used to get a sense of the degree to which a contrast meets its "potential" for contrast, but should be used with caution, understanding that it does conflate functional load and predictability of distribution.
 
 Average Functional Load
 ````````````````````````
 
-[Hume2013]_ suggests that the average functional load (there called "relative contrastiveness") is a useful way of indicating how much work an individual segment does, on average, in comparison to other segments. This is calculated by taking an individual segment, calculating the pairwise functional load of that segment and each other segment in the inventory, and then taking the average across all those pairs. This calculation can also be performed in PCT.
+[Hume2013]_ suggests that the average functional load (there called "relative contrastiveness") is a useful way of indicating how much work an individual segment does, on average, in comparison to other segments. This is calculated by taking an individual segment, calculating the pairwise functional load of that segment and each other segment in the inventory (using any of the methods described above), and then taking the average across all those pairs. This calculation can also be performed in PCT.
 
 Environment Filters
 ```````````````````
